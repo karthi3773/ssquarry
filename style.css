@@ -1,0 +1,167 @@
+/* ==== Global Styles ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: #e6d3b3; /* light brown */
+    color: #5a4634; /* normal body text to brown */
+    line-height: 1.6;
+}
+
+/* ==== Header ==== */
+header {
+    background: linear-gradient(to right, #3d2c18, #5a4634); /* dark brown gradient */
+    padding: 15px 0;
+    box-shadow: 0 3px 10px rgba(234, 97, 6, 0.915);
+}
+
+header .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 65px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #3d2c18;
+    color: #fff;
+}
+
+header h1, header h2 {
+    color: #3d2c18; /* dark brown for header headings */
+}
+
+header, header .container {
+    color: #e6d3b3; /* light brown text inside header */
+}
+
+/* ==== Content Section ==== */
+.container {
+    width: 90%;
+    margin: 25px auto;
+    padding: 20px;
+    background: #e3e4e4;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(235, 30, 30, 0.1);
+    color: #568387; /* light brown text inside body container */
+}
+
+h1, h2 {
+    color: #3d2c18;
+    margin-bottom: 15px;
+    border-left: 5px solid #c29f6d;
+    padding-left: 10px;
+}
+
+p, li {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+/* ==== Footer ==== */
+footer {
+    background: linear-gradient(to right, #3d2c18, #5a4634); /* dark brown gradient same as header */
+    color: #e6d3b3; /* light brown text color */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 3px 10px rgba(234, 97, 6, 0.915), 0 -3px 10px rgba(234, 97, 6, 0.915); /* orange box shadow above and below */
+}
+
+footer a {
+    color: #f4e2d0;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffd27f;
+}
+
+/* ==== Social Icons ==== */
+.social-icons img {
+    width: 28px;
+    margin: 0 6px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* ==== Photo Grid ==== */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.pre-header-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.pre-header-logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    vertical-align: middle;
+}

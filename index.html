@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivasakthi Stone Quarry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="C:\Users\jbred\OneDrive\Desktop\Karthi.in\Karthi.in\img\logo.jpg" alt="Sivasakthi Stone Quarry Logo">
+            <h1 style="margin-left: -550px;">Sivasakthi Stone Quarry</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 style="color: #3d2c18;">Welcome to Sivasakthi Stone Quarry</h1>
+        <h3><span class="black-text" style="color: #3d2c18;">We provide high-quality stones, statues, and stone processing services. From raw rock mining to custom stone sculptures, we are your trusted partner in stone craftsmanship.</span></h3>
+        <h1>At Sivasakthi Stone Quarry, we specialize in:</h1>
+    <ul>
+        <li>Natural Rock Mining – Sourcing high-quality raw stones from reliable quarries.</li>
+        <li>Stone Processing – Turning raw materials into refined, cut, and shaped stone blocks and slabs.</li>
+        <li>Custom Stone Statues – Designing and sculpting unique stone statues as per customer specifications.</li>
+        <li>Finished Stone Goods Export – Safely transporting heavy stone goods using industrial-grade vehicles and logistics.</li>
+    </ul>
+    <p>Whether you're seeking traditional statues, temple stonework, or raw construction materials, we cater to a wide variety of residential, commercial, and spiritual projects.</p>
+        <!-- Image carousel -->
+        <div class="carousel-container">
+            <button class="arrow left" onclick="prevSlide()">&#8592;</button>
+            <div class="carousel-track" id="carousel-track">
+                <img src="images/img10.jpg" alt="Image 10">
+                <img src="images/img1.jpg" alt="Image 1">
+                <img src="images/img2.jpg" alt="Image 2">
+                <img src="images/img3.jpg" alt="Image 3">
+                <img src="images/img4.jpg" alt="Image 4">
+                <img src="images/img5.jpg" alt="Image 5">
+                <img src="images/img6.jpg" alt="Image 6">
+                <img src="images/img7.jpg" alt="Image 7">
+                <img src="images/img8.jpg" alt="Image 8">
+                <img src="images/img9.jpg" alt="Image 9">
+            </div>
+            <button class="arrow right" onclick="nextSlide()">&#8594;</button>
+        </div>
+        <script>
+            const track = document.getElementById('carousel-track');
+            const images = track.querySelectorAll('img');
+            let position = 0;
+            function getImageWidth() {
+                return images[0].getBoundingClientRect().width + 20; // 20px margin
+            }
+            function updateCarousel(instant = false) {
+                const imageWidth = getImageWidth();
+                track.style.transition = instant ? 'none' : 'transform 0.5s cubic-bezier(.77,0,.18,1)';
+                track.style.transform = `translateX(${-position * imageWidth}px)`;
+            }
+            function prevSlide() {
+                if (position === 0) {
+                    position = images.length - 1;
+                    updateCarousel(true);
+                    setTimeout(() => {
+                        updateCarousel();
+                    }, 20);
+                } else {
+                    position--;
+                    updateCarousel();
+                }
+            }
+            function nextSlide() {
+                if (position === images.length - 1) {
+                    position = 0;
+                    updateCarousel(true);
+                    setTimeout(() => {
+                        updateCarousel();
+                    }, 20);
+                } else {
+                    position++;
+                    updateCarousel();
+                }
+            }
+            window.addEventListener('resize', () => updateCarousel(true));
+            window.onload = () => updateCarousel(true);
+        </script>
+        <style>
+            .carousel-container {
+                position: relative;
+                width: 100%;
+                max-width: 2000px;
+                margin: 30px auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+            .carousel-track {
+                display: flex;
+                transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+            }
+            .carousel-track img {
+                width: 100%;
+                max-width: 300px;
+                border-radius: 10px;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+                margin: 0 10px;
+            }
+            .arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(255,255,255,0.8);
+                border: none;
+                font-size: 2rem;
+                padding: 10px 16px;
+                cursor: pointer;
+                border-radius: 50%;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                z-index: 2;
+                transition: background 0.2s;
+            }
+            .arrow.left {
+                left: 10px;
+            }
+            .arrow.right {
+                right: 10px;
+            }
+            .arrow:hover {
+                background: #e0e0e0;
+            }
+            .black-text {
+                color: #000;
+            }
+        </style>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://wa.me/917604835648" title="WhatsApp"><i class="fab fa-whatsapp fa-2x" style="color:#25D366;"></i></a>
+            <a href="https://www.facebook.com/" title="Facebook"><i class="fab fa-facebook fa-2x" style="color:#1877F3;"></i></a>
+            <a href="https://www.instagram.com/sivasakthi_stone_quarry" title="Instagram"><i class="fab fa-instagram fa-2x" style="color:#E4405F;"></i></a>
+            <a href="mailto:official03sivasakthi@gmail.com" title="Email"><i class="fas fa-envelope fa-2x" style="color:#EA4335;"></i></a>
+        </div>
+        <p>© 2025 Sivasakthi Stone Quarry. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
